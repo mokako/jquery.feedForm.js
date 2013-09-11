@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT" />	
+	
+	
+ 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+ 	<script charset="utf-8" src="js/jquery.feedForm.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="form"></div>
+	<script type="text/javascript">
+	
+$(function(){
+	$("#form").feedForm({
+		obj : {
+			0 : {
+				tag : "input", 
+				type : "text",
+				name : "0",
+				value : ["text"],
+				str : ["tree"],
+				textSetFront : true,	
+				label : true
+				},
+			1 : {
+				tag : "select",
+				name : "vegetable",
+				value : [0,1,2,3],
+				str : ["corn","carrot","potato","onion"]
+			},
+			2 : {
+				tag : "p",
+				str : ["hello world"]
+			},
+			3 : {
+				tag : "textarea",
+				set : {cols:25,rows:6},
+				name : "joker0",
+				value : [""],
+				str : [""]				
+			},
+			4 : {
+				tag : "input",
+				name : "joker1",
+				type : "checkbox",
+				value : [0,1,2,3,4],
+				str : ['a','b','c','d','e']				
+			},
+			5 : {
+				tag : "input",
+				name : "joker2",
+				type : "checkbox",
+				value : [0,1,2,3,4],
+				str : ['a1','b2','c3','d4','e5'],
+				textSetFront : true,
+				label : true			
+			},
+			6 : {
+				tag : "input",
+				name : "joker3",
+				type : "checkbox",
+				value : [0,1,2,3,4],
+				str : ['a','b','c','d','e']				
+			},
+			7 : {
+				tag : "input",
+				name : "joker4",
+				type : "checkbox",
+				value : [0,1,2,3,4],
+				str : ['a','b','c','d','e']				
+			},
+			8 : {
+				tag : "input",
+				name : "joker5",
+				type : "radio",
+				value : [0,1,2,3,4],
+				str : ['a','b','c','d','e']				
+			},
+			9 : {
+				tag : "input",
+				name : "joker6",
+				type : "radio",
+				value : [0,1,2,3,4],
+				str : ['a','b','c','d','e']				
+			},
+			10 : {
+				tag : "input",
+				type : "submit",
+				value : ["submit"],
+				str : [""]
+			}
+		},
+		submit : function(obj){
+			console.log(JSON.stringify(obj));
+		},
+		click : function(e){
+					
+		}
+			
+	});
+});
+
+	</script>
+</body>
+</html>
